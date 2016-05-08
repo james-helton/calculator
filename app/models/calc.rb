@@ -11,11 +11,15 @@ class Calc
     difference
   end
 
-  def divide(num1, num2)
-    num1 / num2
+  def divide(dividend, *divisor)
+    quotient = dividend
+    divisor.each { |x| quotient /= x }
+    quotient
   end
 
-  def multiply(num1, num2)
-    num1 * num2
+  def multiply(multiplier, *multiplicand)
+    product = multiplier
+    multiplicand.each { |x| product *= x }
+    product
   end
 end
